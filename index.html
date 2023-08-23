@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <script> -->
+       var colorsArray = ["red", "yellow", "blue", "green", "black"];
+       var studentsArray = ["maya", "omer", "nitzan", "matan", "sagi"];
+       var animalsArray = ["dog","shark", "cat", "snake", "frog" ];
+       var citiesArray = ["Ashdod", "Rehovot", "Givatayim", "Holon", "Lod"];
+       console.log(colorsArray[1]); 
+       console.log(studentsArray[4]); 
+       console.log(animalsArray[2]); 
+       console.log(citiesArray[1]); 
+       colorsArray[5]  = "white";
+    </script>
+
+    <!-- <script> -->
+        var colorsArray = ["red", "yellow", "blue", "green", "black"];
+        console.log(colorsArray);
+        function getColors (color){
+            if(colorsArray[2] === "blue"){
+                colorsArray[2] = color;
+            }
+        }
+
+        getColors("white");
+        console.log(colorsArray);
+        for(var i =0; i < colorsArray.length; i++){
+            console.log(colorsArray[i]);
+        }
+
+        var yearsArray = [1999, 2000, 1996, 2014, 1995];
+        function printYears (){
+            for(var i = 0; i < yearsArray.length; i++) {
+                console.log(yearsArray[i]);
+            }
+        }
+
+        printYears();
+
+        function printYearsAfter99 (){
+            for (var i = 0; i < yearsArray.length; i++){
+                if(yearsArray[i] > 1999){
+                    console.log(yearsArray[i]);
+                } 
+            }
+        }
+
+        printYearsAfter99();
+        </script>
+
+       <!-- <script>  -->
+        var studentsArray = ["maya", "omer", "nitzan", "matan", "sagi"];
+        function findName (name) {
+            for(var i = 0; i < studentsArray.length; i++){
+                if(name == studentsArray[i]){
+                    console.log(studentsArray[i] + " is alredy exsist!");
+                    return
+                }
+            } 
+            console.log("not exsist");
+        }
+
+        findName("omer");
+    </script>
+<!-- <script> -->
+    function getFromUser (arry, parameter) {
+        for(var i = 0; i < arry.length; i++){
+            if(parameter === arry[i]){
+                console.log(parameter + " is alreadt exsist");
+                return;
+            } 
+        }
+        console.log("not exsist");
+    }
+
+    getFromUser(studentsArray, "maya"); 
+    </script>
+        <!-- <script> -->
+            function getNumUser(){
+                var num = +prompt("enter number");
+                var arry = [];
+                for (var i = 0 ; i < num ; i++){
+                    arry[i] = +prompt("enter number " + [i + 1] + ":")
+                }
+                console.log(arry);
+            }
+
+            getNumUser();
+            </script>
+
+            <script>
+                function  numbersFromUser (){
+                        var arry = [];
+                        var i =0;
+                        arry[i] = +prompt("enter number");
+                        while (arry[i] >= 10){
+                            i++;
+                            arry[i]= +prompt("enter number");    
+                        }
+                        console.log(arry);
+                    }
+                    numbersFromUser();
+            </script>
+</body>
+</html>

@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var countriesArray = ["israel", "london", "germany", "sinai", "jordan"];
+        var vegtableArray = ["cucumber", "tomato", "potato", "olive", "curret"];
+        var fruitsArray = ["orange", "straberry", "lemon", "appel", "cherry"];
+        var mashinArray = ["car", "bus", "bike", "mudercycle", "minibus"];
+        var kitchenArray = ["plan", "spoon", "glass", "fork", "knife"];
+        console.log(countriesArray[1]);
+        console.log(vegtableArray[3]);
+        console.log(fruitsArray[4]);
+        console.log(mashinArray[3]);
+        console.log(kitchenArray[5]);
+        countriesArray[0] = "turkey"
+        console.log(countriesArray);
+        vegtableArray[2] = "gamba";
+        fruitsArray[3] = "banana";
+        mashinArray[1] = "train";
+        kitchenArray[4] = "bowl";
+        function printAllCountries (){
+            console.log(countriesArray);
+        }
+        printAllCountries();
+        function printCountries (){
+            for( var i =0; i < countriesArray.length; i++){
+                console.log(countriesArray[i]);
+            }
+        }
+        printCountries();
+
+        function addMoreFruits(fruit, Array) {
+            Array.push(fruit);
+        }
+
+         var newFruits = "grape";
+        addMoreFruits(newFruits,fruitsArray);
+        console.log(fruitsArray);
+
+        function checkFruitExsist (fruit, array){
+            for ( var i = 0 ; i < array.length; i++){
+                if (fruit == array[i]){
+                    console.log(fruit + " is alredy exsist!");
+                    return
+                } 
+            }
+        }
+
+        var newAdd = "lemon";
+        checkFruitExsist(newAdd, fruitsArray);
+
+        function checkArrays (array1, array2){
+            if(array1.length == array2.length){
+                console.log("arrays are equal");
+                return
+            }
+        }
+
+        checkArrays(mashinArray, kitchenArray);
+        console.log(mashinArray.length + "=" + kitchenArray.length);
+
+        function addCountryToArr(number, country, Array) {
+            if (number > 5) {
+                Array.push(country);
+            } else {
+                Array.unshift(country);
+            }
+        }
+        var inputNumber = 3;
+        var inputCountry = "Germany";
+
+        addCountryToArr(inputNumber, inputCountry, countriesArray);
+
+        function getDetails (number, tool, array){
+            if(number > array.length){
+                array.push(tool);
+                console.log(array);
+            } else {
+                return "its not working!";
+            }
+        }
+
+        var num = 6;
+        var kitchenTool = "spoon";
+        getDetails(num, kitchenTool, kitchenArray)
+
+        // --------12----------
+
+        function createNumberArray(maxNumber) {
+            var numberArray = [];
+
+            for (var i = 0; i <= maxNumber; i++) {
+                numberArray.push(i);
+            }
+            return numberArray;
+        }
+
+        // var num = +prompt("enter a number")
+        // console.log(createNumberArray(num));
+
+        // ------------13--------
+        function createReversedNumbersArray(maxNumber) {
+            var numbersArray = [];
+            for (var i = maxNumber; i >= 0; i--) {
+                numbersArray.push(i);
+            }
+            return numbersArray;
+        }
+
+        // var num = +prompt("enter a number")
+        // console.log(createReversedNumbersArray(num));
+
+        // --------14----------
+
+        function getLastNamaFromUser (){
+            var lastNamesArray = [];
+
+            for (var i = 0; i < 4 ; i++){
+                var someLastName = prompt("enter last name");
+                lastNamesArray.push(someLastName);
+            }
+            return lastNamesArray
+        }
+
+        // var result1 = getLastNamaFromUser();
+        // console.log(result1);
+
+        // ----------15-----------
+        // function createSeriesArray(number) {
+        //     var seriesArray = []; // יצירת מערך ריק
+
+        //     for (var i = 1; i <= number; i++) { // לולאה ליצירת סדרות בהתאם למספר הנתון
+        //         var series = []; // יצירת מערך סדרה ריק
+
+        //         for (var j = 1; j <= i; j++) {
+        //             series.push(j); // הוספת המספר j לסדרה
+        //         }
+
+        //         seriesArray.push(series); // הוספת הסדרה למערך הסדרות
+        //     }
+
+        //     return seriesArray; // החזרת המערך של הסדרות
+        // }
+
+        // var userInput = +prompt("Enter a number: "); // קליטת מספר מהמשתמש
+        // var resultArray = createSeriesArray(userInput); // יצירת מערך הסדרות על פי המספר הנתון
+        // console.log(resultArray); // הדפסת המערך ללוג
+
+        // ---------16----------
+
+        // var numbersArray = [5, 3, 7, 8, 11];
+        // var sum = 0;
+
+        // for (var i = 0; i < numbersArray.length; i++) {
+        //     sum += numbersArray[i]; 
+        // }
+
+        // var average = sum / numbersArray.length; 
+
+        // console.log("Sum: " + sum);
+        // console.log("Average: " + average);
+
+        // -----------17----------
+        var arryNames = ["maya", "omer", "sara"];
+
+        for (i = 0; i < arryNames.length; i++){
+            console.log(arryNames[i]);
+        }
+
+        // -----------18----------
+        // function checkNumberInArray (array, number) {
+        //     var isNumFound = false;
+
+        //     for ( i = 0; i < array.length; i++){
+        //         if(array[i] === number){
+        //             isNumFound = true;
+        //             break;
+        //         }
+        //     }
+        //     return isNumFound;
+        // }
+
+        // var numbers = [1, 2, 3, 4, 5];
+        // var searchNumber = 5;
+
+        // var isFound = checkNumberInArray(numbers, searchNumber);
+        // console.log(isFound);
+
+        // -----------20-----------
+        // function checkEvenNumbers (array){
+        //     var evenCount = 0;
+        //     for(i =0; i < array.length; i++){
+        //         if(array[i] % 2 === 0){
+        //             evenCount++
+        //         }
+        //     }
+        //     return evenCount
+        // }
+
+        // var numbers = [1, 2, 3, 4, 5, 6];
+        // var evenNum = checkEvenNumbers(numbers);
+        // console.log(evenNum);
+
+        // -----------21------------
+    //     function changeArrays(firstArray, secoundArray){
+    //         if(firstArray.length == secoundArray.length){
+    //             firstArray = secoundArray;
+    //             console.log("true");
+    //             return true;
+    //         }
+    //         return false;
+    //     }
+
+    //    var result = changeArrays(mashinArray, kitchenArray);
+    //    console.log(result);
+
+// -----------21++-----------
+        // function changeArrays(firstArray, secoundArray){
+        //     if(firstArray.length == secoundArray.length){
+        //         var tempArray = firstArray;
+        //         firstArray = secoundArray;
+        //         secoundArray = tempArray;
+        //         return true;
+        //     }
+        //     return false;
+        // }
+
+        // --------23+24------
+    //     function bubbleSort(array) {
+    // var length = array.length;
+    
+    //         for (var i = 0; i < length - 1; i++) {
+    //             for (var j = 0; j < length - i - 1; j++) {
+    //                 if (array[j] > array[j + 1]) {
+    //                     var temp = array[j];
+    //                     array[j] = array[j + 1];
+    //                     array[j + 1] = temp;
+    //                 }
+    //             }
+    //         }
+    //     }
+
+    //     var numbers = [5, 2, 8, 1, 9, 3];
+    //     bubbleSort(numbers);
+    //     console.log(numbers);
+
+    // -----------25---------
+    function findMaxNumber(array) {
+            if (array.length === 0) {
+                return undefined; 
+            }
+
+            var max = array[0]; 
+
+            for (var i = 1; i < array.length; i++) {
+                if (array[i] > max) {
+                    max = array[i];
+                }
+            }
+            return max;
+        }
+
+        var numbers = [5, 2, 8, 17, 9, 3];
+        var maxNumber = findMaxNumber(numbers);
+        console.log(maxNumber);
+
+        // --------26-------
+        // function findIndexOfMinNumber(array) {
+        //     if (array.length === 0) {
+        //         return -1; 
+        //     }
+
+        //     var minIndex = 0; 
+        //     for (var i = 1; i < array.length; i++) {
+        //         if (array[i] < array[minIndex]) {
+        //             minIndex = i; 
+        //         }
+        //     }
+        //     return minIndex;
+        // }
+
+        // var numbers = [5, 2, 8, 1, 9, 3];
+        // var minIndex = findIndexOfMinNumber(numbers);
+        // console.log(minIndex);
+        
+        // ----------27---------
+        // function sumOfArray(array) {
+
+        //     var sum = 0; 
+        //     for (var i = 0; i < array.length; i++) {
+        //         sum += array[i]; 
+        //     }
+        //     return sum; 
+        // }
+
+        // var numbers = [5, 2, 8, 1, 9, 3];
+        // var totalSum = sumOfArray(numbers);
+        // console.log(totalSum);
+
+        // -----------28---------
+        // function maxTimesMin(array) {
+        //     var max = Math.max(...array); 
+        //     var min = Math.min(...array); 
+        //     return max * min; 
+        // }
+
+        // var numbers = [5, 2, 8, 1, 10, 3];
+        // var result = maxTimesMin(numbers);
+        // console.log(result); 
+
+        // ---------29---------
+        // function printHighestEvenIndexAndValue(array) {
+        //     let maxEven = -Infinity;
+        //     let index = -1;
+
+        //     for (let i = 0; i < array.length; i++) {
+        //         if (array[i] % 2 === 0 && array[i] > maxEven) {
+        //             maxEven = array[i];
+        //             index = i;
+        //         }
+        //     }
+
+        //     if (index !== -1) {
+        //         console.log(`Highest even value: ${maxEven}`);
+        //         console.log(`Index of highest even value: ${index}`);
+        //     } else {
+        //         console.log("No even numbers found in the array.");
+        //     }
+        // }
+
+        // let numbersArray = [5, 3, 7, 8, 11, 14, 6];
+        // printHighestEvenIndexAndValue(numbersArray);
+
+        // -------------30-------
+        // function sumOfOddNumbers(array) {
+        //     let sum = 0;
+
+        //     for (let i = 0; i < array.length; i++) {
+        //         if (array[i] % 2 !== 0) {
+        //             sum += array[i];
+        //         }
+        //     }
+        //     return sum;
+        // }
+
+        // let numbersArray = [5, 3, 7, 8, 11, 14, 6];
+        // let result = sumOfOddNumbers(numbersArray);
+        // console.log(`Sum of odd numbers: ${result}`);
+
+        // --------------31--------
+        // function addNameToEnd(namesArray, newName) {
+        //     namesArray.push(newName);
+        //     return namesArray;
+        // }
+
+        // var names = ["Alice", "Bob", "Charlie"];
+        // var newName = "David";
+
+        // let updatedNames = addNameToEnd(names, newName);
+        // console.log(updatedNames);
+
+        // -------------32---------
+        // function addEmailToStart(emailsArray, newEmail) {
+        //     emailsArray.unshift(newEmail);
+        //     return emailsArray;
+        // }
+
+        // let emails = ["alice@example.com", "bob@example.com", "charlie@example.com"];
+        // let newEmail = "david@example.com";
+        // let updatedEmails = addEmailToStart(emails, newEmail);
+        // console.log(updatedEmails);
+
+        // ------------33--------
+        // function addNumberToSpecificPosition(numbersArray, newNumber) {
+        //     if (newNumber % 2 === 0) {
+        //         numbersArray.unshift(newNumber); 
+        //     } else {
+        //         numbersArray.push(newNumber);
+        //     }
+        //     return numbersArray;
+        // }
+
+        // let numbers = [1, 3, 5, 7, 9];
+        // let newNumber = 4;
+
+        // let updatedNumbers = addNumberToSpecificPosition(numbers, newNumber);
+        // console.log(updatedNumbers);
+
+        // ----------34--------
+        // function addOrRemoveNumber(numbersArray, targetNumber) {
+        //     let index = numbersArray.indexOf(targetNumber); 
+
+        //     if (index !== -1) {
+        //         numbersArray.splice(index, 1); 
+        //     } else {
+        //         numbersArray.push(targetNumber);
+        //     }
+        //     return numbersArray;
+        // }
+
+        // let numbers = [1, 3, 5, 7, 9];
+        // let targetNumber = 4;
+        // let updatedNumbers = addOrRemoveNumber(numbers, targetNumber);
+        // console.log(updatedNumbers);
+
+        // ------------38-----------
+        // function printNames(age, firstName, lastName, count) {
+        //     if (age > 18) {
+        //         for (let i = 0; i < count; i++) {
+        //             console.log(firstName + ' ' + lastName);
+        //         }
+        //     } else {
+        //         console.log(lastName + ' ' + firstName);
+        //     }
+        // }
+        
+        // let age = 20;
+        // let firstName = 'John';
+        // let lastName = 'Doe';
+        // let count = 3;
+        // printNames(age, firstName, lastName, count);
+        
+        // -------39------
+        function printStatement(statement, times) {
+            for (var i = 0; i < times; i++) {
+                console.log(statement);
+            }
+        }
+
+        var sentence = "javascript is not JAVA";
+        var repetitions = 1000;
+
+        printStatement(sentence, repetitions);
+
+        // -----40-----
+        // function getFromUsr(number, name){
+        //     for (let index = 0; index < number; index++) {
+        //         console.log(name);  
+        //     }
+        // }
+
+        // var num = 4;
+        // var myName = "maya";
+        // getFromUsr(num, myName);
+
+        // ------41--------
+        // var userData = []; 
+        // var name = prompt("Please enter your name: ");
+        // var email = prompt("Please enter your email: ");
+        // var age = parseInt(prompt("Please enter your age: "));
+
+        // userData.push({
+        //     name: name,
+        //     email: email,
+        //     age: age
+        // });
+
+        // for (var i = 0; i < userData.length; i++) {
+        //     console.log("User " + (i + 1) + " details:");
+        //     console.log("Name: " + userData[i].name);
+        //     console.log("Email: " + userData[i].email);
+        //     console.log("Age: " + userData[i].age);
+        // }
+
+        // --------42------
+
+
+
+        // --------47------
+        // function fillOddNumbersArray() {
+        //     var oddNumbersArray = [];
+        //     var count = 0;
+        //     while (count < 7) {
+        //         var num = +prompt("Enter a number: ");
+        //         if (num % 2 !== 0) {
+        //             oddNumbersArray.push(num);
+        //             count++;
+        //         }
+        //     }
+        //     console.log("Odd numbers array:", oddNumbersArray);
+        // }
+        // fillOddNumbersArray();
+
+        // -------48------
+        // var randomArray = [5, "apple", 8, "banana", "cherry", 3];
+        //     for (var i = 0; i < randomArray.length; i++) {
+        //         if (typeof randomArray[i] !== "number") {
+        //             randomArray[i] = "not_number";
+        //         }
+        //     }
+        //     console.log(randomArray);
+
+        // question 49
+        function getEvenNumbers (){
+            var numsArray = [];
+
+            for ( var i = 0; i < 10; i++){
+                // var num = +prompt("enter a number")
+                if(num % 2 == 0){
+                    numsArray.push(num);
+                }
+            }
+        if(numsArray.length == 10){
+            i = 10;
+        }
+            console.log(numsArray);
+        }
+        getEvenNumbers();
+
+
+
+    </script>
+</body>
+</html>
